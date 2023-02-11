@@ -1,0 +1,114 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(246,245,255);
+background: linear-gradient(180deg, rgba(246,245,255,1) 0%, rgba(147,255,243,1) 100%);
+}
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height:100%;
+  width:100%;
+}
+.digital{
+  border:10px solid #4d4d4d;
+  border-radius: 15px;
+  height:150px;
+  width: 400px;
+  font-size: 100px;
+  color: green;
+  background-color:#000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.analogico{
+  width:350px;
+  height:350px;
+  border:4px solid black;
+  border-radius: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:white;
+  background-image:url(clock.png);
+  background-size:100%;
+  background-repeat:no-repeat;
+}
+.analogico::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #000000;
+    border-radius: 50%;
+    z-index: 10000;
+}
+
+.analogico .hora, .analogico .minuto, .analogico .segundo{
+    position: absolute;
+}
+
+.analogico .hora, .hr{
+    width: 160px;
+    height: 160px;
+}
+
+.analogico .minuto,.mn{
+    width: 190px;
+    height: 190px;
+}
+
+.analogico .segundo, .sc{
+    width: 230px;
+    height: 230px;
+}
+
+.hr, .mn, .sc{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hr::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background: red;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+
+.mn::before{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background: black;
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}
+
+.sc::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background: #ff9f1c;
+    z-index: 12;
+    border-radius: 6px 6px 0 0;
+}
+
